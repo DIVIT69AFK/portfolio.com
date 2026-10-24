@@ -1,0 +1,159 @@
+
+
+
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+header {
+    background-color: #dceeff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #17365d;
+    font-size: 32px;
+}
+
+nav a {
+    color: #17365d;
+    margin: 0 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h2 {
+    color: #24527a;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #8bbce8;
+}
+
+button {
+    background-color: #24527a;
+    color: white;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    
+    outline: 10px solid #24527a;
+}
+
+footer {
+    background-color: #dceeff;
+    padding: 12px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+style.css
+Displaying ghost.jpg.
+
+/* Portfolio polish and responsive image styling */
+.profile-image {
+    display: block;
+    width: min(100%, 320px);
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border-radius: 8px;
+}
+
+figure {
+    margin: 16px 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill-card {
+    flex: 1 1 180px;
+    padding: 14px;
+    border: 1px solid #d6e1ec;
+    border-radius: 8px;
+    background: #f8fbff;
+}
+
+button:hover {
+    filter: brightness(1.12);
+    outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #8bbce8;
+    outline-offset: 3px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+@media (max-width: 600px) {
+    .profile-image {
+        width: min(100%, 260px);
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 6px;
+    }
+}
