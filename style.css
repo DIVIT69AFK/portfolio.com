@@ -1,8 +1,7 @@
 body {
     background:
-        radial-gradient(circle at top, rgba(114, 92, 255, 0.35), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.18), transparent 28%),
-        linear-gradient(135deg, #050816 0%, #0d1325 40%, #111827 100%);
+        linear-gradient(rgba(4, 7, 16, 0.70), rgba(4, 7, 16, 0.70)),
+        url('https://apod.nasa.gov/apod/image/2610/DMmatter_simulation_abekahler_960.jpg') center center / cover no-repeat fixed;
     color: #e5e7eb;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -113,23 +112,39 @@ textarea:focus {
 }
 
 button {
-    background: linear-gradient(135deg, #7c3aed 0%, #38bdf8 100%);
-    color: white;
-    padding: 11px 18px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #00f5d4 0%, #7c3aed 35%, #00d9ff 100%);
+    color: #f8fafc;
+    padding: 12px 22px;
     border: none;
     border-radius: 999px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 245, 212, 0.8), 0 0 25px rgba(124, 58, 237, 0.55);
     transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    box-shadow: 0 8px 18px rgba(124, 58, 237, 0.35);
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.45) 50%, transparent 100%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
 }
 
 button:hover {
-    filter: brightness(1.08);
-    transform: translateY(-1px);
-    box-shadow: 0 12px 22px rgba(56, 189, 248, 0.28);
-    outline: none;
+    filter: brightness(1.15);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.95), 0 0 40px rgba(124, 58, 237, 0.75), 0 12px 28px rgba(0, 245, 212, 0.45);
+    animation: neonPulse 1.4s ease-in-out infinite alternate;
+}
+
+button:hover::before {
+    transform: translateX(120%);
 }
 
 button:focus-visible,
@@ -146,7 +161,6 @@ footer {
     color: #cbd5e1;
 }
 
-/* Portfolio polish and responsive image styling */
 .profile-image {
     display: block;
     width: min(100%, 320px);
@@ -206,6 +220,15 @@ textarea {
 #greeting-text,
 #form-feedback {
     color: #e2e8f0;
+}
+
+@keyframes neonPulse {
+    from {
+        box-shadow: 0 0 18px rgba(0, 217, 255, 0.72), 0 0 32px rgba(124, 58, 237, 0.68), 0 10px 25px rgba(0, 245, 212, 0.32);
+    }
+    to {
+        box-shadow: 0 0 26px rgba(0, 245, 212, 0.95), 0 0 42px rgba(124, 58, 237, 0.82), 0 14px 30px rgba(0, 217, 255, 0.5);
+    }
 }
 
 @media (max-width: 600px) {
